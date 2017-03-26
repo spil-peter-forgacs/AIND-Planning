@@ -208,7 +208,7 @@ class AirCargoProblem(Problem):
         count = 0
 
         '''
-        The minimum number of actions needed to satisfy all goals.
+        The minimum number of actions needed to satisfy all goals:
         Check how many of the goal states are not yet satisfied in the current state.
         '''
 

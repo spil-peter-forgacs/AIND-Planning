@@ -548,6 +548,30 @@ class PlanningGraph():
         :return: int
         '''
         level_sum = 0
-        # TODO implement
+
         # for each goal in the problem, determine the level cost, then add them together
+
+        '''
+        Level sum:
+        * For each goals determine which level is the first where appears.
+        * Sum the numbers
+        E.g.: If there are two goals, one first appears at level 2, and the other appears at level 3, the result is 5.
+        '''
+
+        for goal in self.problem.goal:
+            goal_s = PgNode_s(goal, True)
+
+            not_found = True
+            level = 0
+            while not_found and level < len(self.s_levels):
+                if goal_s in self.s_levels[level]:
+                    not_found = False
+                    level_sum = level_sum + level
+
+                level = level + 1
+
+            if not_found:
+                # Goal is not achievable.
+                pass
+
         return level_sum
