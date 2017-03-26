@@ -204,12 +204,12 @@ class AirCargoProblem(Problem):
         conditions by ignoring the preconditions required for an action to be
         executed.
         '''
-        # TODO implement (see Russell-Norvig Ed-3 10.2.3  or Russell-Norvig Ed-2 11.2)
+        # implement (see Russell-Norvig Ed-3 10.2.3  or Russell-Norvig Ed-2 11.2)
         count = 0
 
         '''
         The minimum number of actions needed to satisfy all goals.
-        How many of the goal states are not yet satisfied in the current state.
+        Check how many of the goal states are not yet satisfied in the current state.
         '''
 
         pos = decode_state(node.state, self.state_map).pos
